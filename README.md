@@ -5,7 +5,22 @@ This is just a lightwaight verion of the MeloTTS, where I have removed any unnes
 - [GLaDOS (from Portal)](https://huggingface.co/dron3flyv3r/MeloTTS-GLaDOS)
 
 
+### Use of models
 
+```python
+from melo.api import TTS
+
+model = TTS("GLADOS") # or "EN"
+
+def tts_file(text: str, path: str):
+    model.tts_to_file(text, 0, path)
+    
+def tts(text: str):
+    temp_path = "temp.wav"
+    tts_file(text, temp_path)
+
+tts("Hello, and again, welcome to the Aperture Science computer-aided enrichment center.")
+```
 
 
 
