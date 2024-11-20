@@ -23,6 +23,6 @@ def cleaned_text_to_sequence(cleaned_text, tones, language, symbol_to_id=None):
 def get_bert(norm_text, word2ph, language, device):
     from .english_bert import get_bert_feature as en_bert
 
-    lang_bert_func_map = {"EN": en_bert}
+    lang_bert_func_map = {"EN": en_bert, "GLADOS": en_bert}
     bert = lang_bert_func_map[language](norm_text, word2ph, device)
     return bert

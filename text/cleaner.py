@@ -2,7 +2,7 @@ from . import english
 from . import cleaned_text_to_sequence
 import copy
 
-language_module_map = {"EN": english}
+language_module_map = {"EN": english, "GLADOS": english}
 
 
 def clean_text(text, language):
